@@ -89,18 +89,18 @@ export default function Background() {
 
       {/* Corner lotus decorations */}
       {[
-        { top: '-60px', left: '-60px', rotate: 0 },
-        { top: '-60px', right: '-60px', rotate: 90 },
-        { bottom: '-60px', left: '-60px', rotate: 270 },
-        { bottom: '-60px', right: '-60px', rotate: 180 },
-      ].map((pos, i) => (
+        { top: '-60px', left: '-60px', rotateDeg: 0 },
+        { top: '-60px', right: '-60px', rotateDeg: 90 },
+        { bottom: '-60px', left: '-60px', rotateDeg: 270 },
+        { bottom: '-60px', right: '-60px', rotateDeg: 180 },
+      ].map(({ rotateDeg, ...pos }, i) => (
         <div
           key={i}
           className="absolute opacity-5"
-          style={{ ...pos, width: 200, height: 200 }}
+          style={{ ...pos, width: 200, height: 200 } as React.CSSProperties}
         >
           <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg"
-            style={{ transform: `rotate(${pos.rotate}deg)` }}>
+            style={{ transform: `rotate(${rotateDeg}deg)` }}>
             {Array.from({ length: 8 }).map((_, j) => (
               <ellipse
                 key={j}

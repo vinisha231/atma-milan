@@ -32,7 +32,6 @@ export default function ScoreCircle({ percentage, accentColor, verdict, emoji }:
 
   // Second ring (decorative, slow rotation via CSS)
   const r2 = radius + 22
-  const c2 = 2 * Math.PI * r2
 
   return (
     <div className="flex flex-col items-center gap-4">
