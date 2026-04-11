@@ -32,7 +32,7 @@ import {
   NakshatraData, YoniAnimal,
 } from './nakshatra'
 
-import { PersonInfo, CompatibilityMetric, CompatibilityResult, MetricLevel, Precision, PersonAstro } from '../types'
+import { PersonInfo, CompatibilityMetric, CompatibilityResult, MetricLevel, Precision } from '../types'
 
 // ─── Legacy Yoni (name first-letter) kept for LOW precision ──────────────────
 // Maps to the 7-animal subset used before — still used as fallback.
